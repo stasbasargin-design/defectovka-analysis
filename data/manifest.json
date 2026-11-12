@@ -1,0 +1,42 @@
+{
+  "created_on": "2026-11-12",
+  "purpose": "Зафиксированные исходные Excel-выгрузки; не изменять вручную",
+  "files": [
+    {
+      "name": "Связаные работы.xlsx",
+      "path": "data/raw/Связаные работы.xlsx",
+      "size_bytes": 996489,
+      "sha256": "55ddba1ff37daf5b964d98e36735fa2054f1e1f8d751dd8efae128e81a71cf1b"
+    },
+    {
+      "name": "остатки по складу (1).xlsx",
+      "path": "data/raw/остатки по складу (1).xlsx",
+      "size_bytes": 888066,
+      "sha256": "ab9b4772f7563e6118e729d990a5e1262058e616bda6b7f293228d617c331212"
+    },
+    {
+      "name": "Прайс на автоработы NPR.xlsx",
+      "path": "data/raw/Прайс на автоработы NPR.xlsx",
+      "size_bytes": 453147,
+      "sha256": "70809af3ef0460dc5a054ba8af9459aa99c3d3b0a4540aa2c8badc6c5f253566"
+    },
+    {
+      "name": "автомобили.xlsx",
+      "path": "data/raw/автомобили.xlsx",
+      "size_bytes": 574252,
+      "sha256": "0ab9e11440cb958d5e150fc9be5d2a8ad30d10ac9eaed163eb5f2ff422a20f20"
+    },
+    {
+      "name": "Прайс-лист на автоработы.xlsx",
+      "path": "data/raw/Прайс-лист на автоработы.xlsx",
+      "size_bytes": 1259093,
+      "sha256": "596de69987683f2928d824496c6a13462ac49e9a85515f413430fb15f22daa64"
+    },
+    {
+      "name": "КП образец.xlsx",
+      "path": "data/raw/КП образец.xlsx",
+      "size_bytes": 62661,
+      "sha256": "a0b25f29343b123e00502a8797137e0fbf617bd1769f0554023d576c3e5e44e2"
+    }
+  ]
+}
