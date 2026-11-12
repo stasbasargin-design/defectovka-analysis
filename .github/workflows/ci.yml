@@ -1,0 +1,35 @@
+name: Проверка дефектовок
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Проверка предметных правил
+        run: python -m unittest discover -s tests -p 'test_rules.py' -v
+      - name: Проверка исходных Excel (только после их загрузки)
+        if: hashFiles('data/raw/*.xlsx') != ''
+        run: python -m unittest discover -s tests -p 'test_sources.py' -v
+      - name: Неразрушающий аудит связей и склада
+        if: hashFiles('data/raw/*.xlsx') != ''
+        run: python scripts/audit_sources.py
+      - name: Сохранить отчет аудита
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-audit
+          path: reports/source-audit.json
+          if-no-files-found: ignore
